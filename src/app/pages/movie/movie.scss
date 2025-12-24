@@ -1,0 +1,21 @@
+@import '../../../styles/colors';
+
+:host ::ng-deep {
+  .p-tablist-tab-list {
+    justify-content: center;
+    .p-tab-active {
+      background: $bgColor;
+    }
+  }
+  .poster {
+    max-width: 100%;
+  }
+  .overviewcontent {
+    p {
+      line-height: 1.25rem;
+    }
+    .stat {
+      margin-bottom: 15px;
+    }
+  }
+}

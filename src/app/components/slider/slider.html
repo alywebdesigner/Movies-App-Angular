@@ -1,0 +1,25 @@
+<div class="slider">
+  <ng-container *ngFor="let item of items; let i = index">
+    <div class="slide" [@slideAnimation] *ngIf="i == currentSliderIndex">
+      <div class="slide-bg">
+        <img [src]="imagessizes.LARGE + item.backdrop_path" alt="" />
+      </div>
+      <div class="slide-pane">
+        <h2 class="title">{{ item.title }} {{ i }}</h2>
+        <div class="meta">
+          <div class="info">
+            <span class="rating" *ngIf="item.vote_average > 0">
+              <span class="app-icon">star</span
+              ><span class="rating-value">{{ item.vote_average }}</span> <span>/10</span></span
+            >
+            <span *ngIf="item.vote_count > 0">{{ item.vote_count }} Reviews</span>
+            <span>{{ item.release_date | date : 'yyyy' }}</span>
+          </div>
+        </div>
+        <div class="desc mt-6">
+          {{ item.overview }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

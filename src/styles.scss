@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'styles/init-css';
+@import 'styles/colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import url(../node_modules/primeflex/primeflex.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('../node_modules/primeicons/primeicons.css');
+@import url('../node_modules/primeflex/themes/primeone-light.css');
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $white;
+  font-size: 14px;
+  background-color: $bgColor;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+.container {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}

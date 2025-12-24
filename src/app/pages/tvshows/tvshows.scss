@@ -1,0 +1,24 @@
+@import '../../../styles/colors';
+
+.tvshows-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+
+  input {
+    width: 100%;
+  }
+}
+
+.tvshows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}

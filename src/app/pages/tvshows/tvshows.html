@@ -1,0 +1,32 @@
+<div class="tvshows-container">
+  <div class="grid">
+    <div class="col-12">
+      <p-iconfield>
+        <p-inputicon class="pi pi-search" />
+        <input
+          type="text"
+          pInputText
+          placeholder="Search TV Shows"
+          fluid
+          [(ngModel)]="searchValue"
+          (keyup)="searchChanged()"
+        />
+      </p-iconfield>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-6 md:col-3 lg:col-3" *ngFor="let tvshow of tvshows">
+      <item [itemData]="tvshow"></item>
+    </div>
+  </div>
+
+  <div class="card flex justify-center">
+    <p-paginator
+      (onPageChange)="paginate($event)"
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="totalRecords"
+      [rowsPerPageOptions]="[10, 20, 30]"
+    />
+  </div>
+</div>
